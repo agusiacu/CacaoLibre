@@ -1,8 +1,444 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-a {
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    color: #3E2723; 
+    background-color: #FFF8E1; 
+}
+
+/* Contenedor principal para centrar contenido */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.main-header {
+    background-color: #fcf8f0; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
     text-decoration: none;
-    color: inherit;
+    gap: 10px;
 }
+
+.logo-img {
+    height: 70px; 
+}
+
+.logo-text {
+    font-family: 'Suez One', serif;
+    font-size: 4vh;
+    color: #5D4037; 
+}
+
+.nav-desktop ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-desktop a {
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+    color: #4E342E; 
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.nav-desktop a:hover {
+    color: #FF8F00;
+}
+
+.btn-donar {
+    background-color: #8BC34A; 
+    color: #ffffff;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-donar:hover {
+    background-color: #689F38;
+    color: #ffffff;
+}
+
+/* Estilos del menu para diseño responsive Celular */
+.menu-btn {
+    display: none; /* Oculto en escritorio */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.menu-btn span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #5D4037; 
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+.nav-mobile {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fcf8f0;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-mobile a {
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    color: #4E342E;
+    font-weight: 700;
+    border-top: 1px solid #FFF8E1;
+}
+
+.nav-mobile a.btn-donar {
+    border-radius: 0;
+    color: white;
+}
+.nav-mobile a.btn-donar:hover {
+    color: white;
+}
+
+.nav-mobile.menu-open {
+    display: flex;
+}
+
+.slideshow-container {
+    position: relative; 
+    height: 70vh; 
+    max-height: 600px;
+    background-color: #333; 
+}
+
+.mySlides {
+    display: none; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1; 
+}
+
+/* Texto superpuesto */
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    z-index: 2; 
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-text h1 {
+    font-family: 'Suez One', serif;
+    font-size: 3.5rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    max-width: 600px;
+}
+
+/* Animación de Fade (de W3Schools) */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: 0.4}
+  to {opacity: 1}
+}
+/*Estilos "quienes somos"*/
+.section-padding {
+    padding: 60px 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Suez One', serif;
+    font-size: 2.5rem; 
+    color: #5D4037; 
+    margin-bottom: 20px;
+}
+
+#quienes-somos .container {
+    max-width: 800px; 
+}
+
+#quienes-somos p {
+    font-size: 1.1rem; 
+    line-height: 1.7;
+    color: #4E342E; 
+}
+
+/*Proyectos destacados */
+
+.proyectos-flex-container {
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 30px; 
+    margin-top: 30px; 
+}
+
+
+.proyecto-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-basis: 350px; /* Ancho base de cada tarjeta */
+    max-width: 400px; 
+}
+
+.proyecto-card:hover {
+    transform: translateY(-5px); /* Efecto de levantar la tarjeta */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+.proyecto-card img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card-content h3 {
+    font-family: 'Suez One', serif;
+    font-size: 1.6rem;
+    color: #5D4037;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #4E342E;
+    margin-bottom: 20px;
+}
+
+.btn-proyecto {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    color: #FF8F00; 
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.btn-proyecto:hover {
+    text-decoration: underline;
+}
+
+.main-footer {
+    background-color: #3E2723; /* Marrón más oscuro */
+    color: #FFF8E1; /* Texto color crema claro */
+    padding: 50px 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap; /* Para responsive */
+}
+
+.footer-col {
+    flex: 1; /* Ocupa 1 parte */
+    min-width: 250px; /* Ancho mínimo antes de apilarse */
+}
+
+/* Columna del logo */
+.footer-col .logo {
+    margin-bottom: 15px;
+}
+
+.copyright {
+    font-size: 0.9rem;
+    color: #D7CCC8; /* Un gris-marrón claro */
+    line-height: 1.5;
+}
+
+/* Columnas de links */
+.footer-col h3 {
+    font-family: 'Suez One', serif;
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #FFF8E1;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #FF8F00; 
+}
+
+.article-flex-layout {
+    display: flex;
+    gap: 24px;
+    align-items: stretch; /* columnas igualan altura */
+    margin: 20px 0;
+}
+
+.article-col-text {
+    min-width: 0;
+}
+
+.article-col-media {
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.article-col-media iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.article-main-image{
+    width: 100%;
+    object-fit: cover;
+    margin: 20px 0;
+}
+
+/*Responsive para tablets*/
+@media (max-width: 900px) {
+    /* Ajustes para tablets: reducir ancho del video y suavizar espacios */
+    .article-flex-layout {
+        gap: 20px;
+    }
+    .article-col-media {
+        width: 420px; /* más pequeño que en escritorio pero mayor que móvil */
+    }
+    .logo-text {
+        font-size: 3.2vh;
+    }
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+    .hero-text p {
+        font-size: 1.25rem;
+    }
+
+    .nav-desktop {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+        .article-flex-layout {
+        flex-direction: column;
+    }
+    .article-col-media {
+        width: 100%;
+    }
+    .article-col-media iframe {
+        height: auto;
+    }
+}
+/*Responsive para celulares*/
+@media (max-width: 768px) {
+
+    .logo-text {
+        font-size: 1.5rem;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-text p {
+        font-size: 1.1rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .proyectos-grid {
+        grid-template-columns: 1fr; /* Esto las apila Y mantiene el 'gap' */
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-col .logo {
+        justify-content: center; 
+    }
+
+}
+
