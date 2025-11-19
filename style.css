@@ -3,11 +3,19 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root {
+    --main: #fcf8f0; /* Color principal para fondos */
+    --main-2: #FFF8E1; /* Color alternativo para fondos */
+    --accent: #3E2723; /* Accento para títulos y otras cosas */
+    --accent-light: #5D4037; /* Accento más claro */
+    --accent-2: #FF8F00; /* Accento alternativo */
+    --accent-3: #8BC34A; /* Accento alternativo */
+}
 
 body {
     font-family: 'Quicksand', sans-serif;
-    color: #3E2723; 
-    background-color: #FFF8E1; 
+    color: var(--accent); 
+    background-color: var(--main-2); 
 }
 
 /* Contenedor principal para centrar contenido */
@@ -18,7 +26,7 @@ body {
 }
 
 .main-header {
-    background-color: #fcf8f0; 
+    background-color: var(--main); 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
@@ -46,7 +54,7 @@ body {
 .logo-text {
     font-family: 'Suez One', serif;
     font-size: 4vh;
-    color: #5D4037; 
+    color: var(--accent-light); 
 }
 
 .nav-desktop ul {
@@ -59,18 +67,18 @@ body {
 .nav-desktop a {
     text-decoration: none;
     font-family: 'Quicksand', sans-serif;
-    color: #4E342E; 
+    color: var(--accent); 
     font-weight: 700;
     transition: color 0.3s ease;
 }
 
 .nav-desktop a:hover {
-    color: #FF8F00;
+    color: var(--accent-2);
 }
 
 .btn-donar {
-    background-color: #8BC34A; 
-    color: #ffffff;
+    background-color: var(--accent-3); 
+    color: white;
     font-weight: 700;
     padding: 10px 20px;
     border-radius: 50px;
@@ -79,8 +87,8 @@ body {
 }
 
 .btn-donar:hover {
-    background-color: #689F38;
-    color: #ffffff;
+    background-color: #7CB342; /* Verde más oscuro */
+    color: white;
 }
 
 /* Estilos del menu para diseño responsive Celular */
@@ -96,7 +104,7 @@ body {
     display: block;
     width: 25px;
     height: 3px;
-    background-color: #5D4037; 
+    background-color: var(--accent-light); 
     margin: 5px 0;
     transition: all 0.3s ease;
 }
@@ -105,7 +113,7 @@ body {
     display: none;
     flex-direction: column;
     width: 100%;
-    background-color: #fcf8f0;
+    background-color: var(--main);
     position: absolute;
     top: 100%; 
     left: 0;
@@ -116,9 +124,9 @@ body {
     text-align: center;
     padding: 15px;
     text-decoration: none;
-    color: #4E342E;
+    color: var(--accent);
     font-weight: 700;
-    border-top: 1px solid #FFF8E1;
+    border-top: 1px solid var(--main-2);
 }
 
 .nav-mobile a.btn-donar {
@@ -137,7 +145,7 @@ body {
     position: relative; 
     height: 70vh; 
     max-height: 600px;
-    background-color: #333; 
+    background-color: var(--accent); 
 }
 
 .mySlides {
@@ -168,7 +176,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%); 
     z-index: 2; 
-    color: #ffffff;
+    color: white;
     text-align: center;
     padding: 20px;
 }
@@ -176,7 +184,7 @@ body {
 .hero-text h1 {
     font-family: 'Suez One', serif;
     font-size: 3.5rem;
-    color: #ffffff;
+    color: white;
     margin-bottom: 10px;
 }
 
@@ -209,7 +217,7 @@ body {
 h2 {
     font-family: 'Suez One', serif;
     font-size: 2.5rem; 
-    color: #5D4037; 
+    color: var(--accent-light); 
     margin-bottom: 20px;
 }
 
@@ -220,7 +228,7 @@ h2 {
 #quienes-somos p {
     font-size: 1.1rem; 
     line-height: 1.7;
-    color: #4E342E; 
+    color: var(--accent); 
 }
 
 /*Proyectos destacados */
@@ -262,21 +270,21 @@ h2 {
 .card-content h3 {
     font-family: 'Suez One', serif;
     font-size: 1.6rem;
-    color: #5D4037;
+    color: var(--accent-light);
     margin-bottom: 10px;
 }
 
 .card-content p {
     font-size: 1rem;
     line-height: 1.6;
-    color: #4E342E;
+    color: var(--accent);
     margin-bottom: 20px;
 }
 
 .btn-proyecto {
     font-family: 'Quicksand', sans-serif;
     font-weight: 700;
-    color: #FF8F00; 
+    color: var(--accent-2); 
     text-decoration: none;
     font-size: 1rem;
 }
@@ -286,8 +294,8 @@ h2 {
 }
 
 .main-footer {
-    background-color: #3E2723; /* Marrón más oscuro */
-    color: #FFF8E1; /* Texto color crema claro */
+    background-color: var(--accent); /* Marrón más oscuro */
+    color: var(--main-2); /* Texto color crema claro */
     padding: 50px 20px;
 }
 
@@ -308,11 +316,13 @@ h2 {
     margin-bottom: 15px;
 }
 
+/* Sin usar
 .copyright {
     font-size: 0.9rem;
-    color: #D7CCC8; /* Un gris-marrón claro */
+    color: #D7CCC8;
     line-height: 1.5;
 }
+*/
 
 /* Columnas de links */
 .footer-col h3 {
@@ -332,13 +342,13 @@ h2 {
 
 .footer-links a {
     text-decoration: none;
-    color: #FFF8E1;
+    color: var(--main-2);
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-    color: #FF8F00; 
+    color: var(--accent-2); 
 }
 
 .article-flex-layout {
