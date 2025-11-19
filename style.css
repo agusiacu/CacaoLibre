@@ -1,21 +1,39 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&family=Suez+One&display=swap');
 :root {
+    /* Colores */
     --main: #fcf8f0; /* Color principal para fondos */
     --main-2: #FFF8E1; /* Color alternativo para fondos */
     --accent: #3E2723; /* Accento para títulos y otras cosas */
     --accent-light: #5D4037; /* Accento más claro */
     --accent-2: #FF8F00; /* Accento alternativo */
     --accent-3: #8BC34A; /* Accento alternativo */
+    /* Fonts */
+    --title: 'Suez One', serif;
+    --text: 'Quicksand', sans-serif;
 }
 
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--text);
+}
 body {
-    font-family: 'Quicksand', sans-serif;
     color: var(--accent); 
     background-color: var(--main-2); 
+}
+h1, h2, h3 {
+    font-family: var(--title);
+    color: var(--accent-light);
+}
+h2 {
+    font-size: 2.5rem;  
+    margin-bottom: 20px;
+}
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
 /* Contenedor principal para centrar contenido */
@@ -25,6 +43,7 @@ body {
     padding: 0 20px;
 }
 
+/* Header */
 .main-header {
     background-color: var(--main); 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -32,50 +51,45 @@ body {
     top: 0;
     z-index: 100;
 }
-
 .header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 0;
 }
-
 .logo {
     display: flex;
     align-items: center;
     text-decoration: none;
     gap: 10px;
 }
-
 .logo-img {
     height: 70px; 
 }
-
 .logo-text {
-    font-family: 'Suez One', serif;
+    font-family: var(--title);
     font-size: 4vh;
     color: var(--accent-light); 
 }
 
+/* Header diseño desktop */
 .nav-desktop ul {
     display: flex;
     align-items: center;
     list-style: none;
     gap: 25px;
 }
-
 .nav-desktop a {
     text-decoration: none;
-    font-family: 'Quicksand', sans-serif;
     color: var(--accent); 
     font-weight: 700;
     transition: color 0.3s ease;
 }
-
 .nav-desktop a:hover {
     color: var(--accent-2);
 }
 
+/* Boton donar */
 .btn-donar {
     background-color: var(--accent-3); 
     color: white;
@@ -85,13 +99,12 @@ body {
     text-decoration: none;
     transition: background-color 0.3s ease;
 }
-
 .btn-donar:hover {
     background-color: #7CB342; /* Verde más oscuro */
     color: white;
 }
 
-/* Estilos del menu para diseño responsive Celular */
+/* Header diseño celular */
 .menu-btn {
     display: none; /* Oculto en escritorio */
     background: none;
@@ -99,7 +112,6 @@ body {
     cursor: pointer;
     padding: 5px;
 }
-
 .menu-btn span {
     display: block;
     width: 25px;
@@ -108,7 +120,6 @@ body {
     margin: 5px 0;
     transition: all 0.3s ease;
 }
-
 .nav-mobile {
     display: none;
     flex-direction: column;
@@ -119,7 +130,6 @@ body {
     left: 0;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
-
 .nav-mobile a {
     text-align: center;
     padding: 15px;
@@ -128,7 +138,6 @@ body {
     font-weight: 700;
     border-top: 1px solid var(--main-2);
 }
-
 .nav-mobile a.btn-donar {
     border-radius: 0;
     color: white;
@@ -136,18 +145,17 @@ body {
 .nav-mobile a.btn-donar:hover {
     color: white;
 }
-
 .nav-mobile.menu-open {
     display: flex;
 }
 
+/* Slideshow hero */
 .slideshow-container {
     position: relative; 
     height: 70vh; 
     max-height: 600px;
     background-color: var(--accent); 
 }
-
 .mySlides {
     display: none; 
     position: absolute;
@@ -158,7 +166,6 @@ body {
     background-size: cover;
     background-position: center;
 }
-
 .hero-overlay {
     position: absolute;
     top: 0;
@@ -180,16 +187,12 @@ body {
     text-align: center;
     padding: 20px;
 }
-
 .hero-text h1 {
-    font-family: 'Suez One', serif;
     font-size: 3.5rem;
     color: white;
     margin-bottom: 10px;
 }
-
 .hero-text p {
-    font-family: 'Quicksand', sans-serif;
     font-size: 1.5rem;
     font-weight: 400;
     max-width: 600px;
@@ -200,39 +203,30 @@ body {
   animation-name: fade;
   animation-duration: 1.5s;
 }
-
 @keyframes fade {
   from {opacity: 0.4}
   to {opacity: 1}
 }
-/*Estilos "quienes somos"*/
+
+/* Section */
 .section-padding {
     padding: 60px 20px;
 }
-
 .text-center {
     text-align: center;
 }
 
-h2 {
-    font-family: 'Suez One', serif;
-    font-size: 2.5rem; 
-    color: var(--accent-light); 
-    margin-bottom: 20px;
-}
-
+/* Quienes somos */
 #quienes-somos .container {
     max-width: 800px; 
 }
-
 #quienes-somos p {
     font-size: 1.1rem; 
     line-height: 1.7;
     color: var(--accent); 
 }
 
-/*Proyectos destacados */
-
+/* Proyectos destacados */
 .proyectos-flex-container {
     display: flex;
     justify-content: center; 
@@ -240,8 +234,6 @@ h2 {
     gap: 30px; 
     margin-top: 30px; 
 }
-
-
 .proyecto-card {
     background-color: #ffffff;
     border-radius: 8px;
@@ -251,69 +243,71 @@ h2 {
     flex-basis: 350px; /* Ancho base de cada tarjeta */
     max-width: 400px; 
 }
-
 .proyecto-card:hover {
     transform: translateY(-5px); /* Efecto de levantar la tarjeta */
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
 }
-
 .proyecto-card img {
     width: 100%;
     height: 200px; 
     object-fit: cover; 
 }
-
 .card-content {
     padding: 25px;
 }
-
-.card-content h3 {
-    font-family: 'Suez One', serif;
-    font-size: 1.6rem;
-    color: var(--accent-light);
-    margin-bottom: 10px;
-}
-
 .card-content p {
     font-size: 1rem;
     line-height: 1.6;
     color: var(--accent);
     margin-bottom: 20px;
 }
-
 .btn-proyecto {
-    font-family: 'Quicksand', sans-serif;
     font-weight: 700;
     color: var(--accent-2); 
     text-decoration: none;
     font-size: 1rem;
 }
-
 .btn-proyecto:hover {
     text-decoration: underline;
 }
 
+/* Footer */
 .main-footer {
     background-color: var(--accent); /* Marrón más oscuro */
     color: var(--main-2); /* Texto color crema claro */
     padding: 50px 20px;
 }
-
 .footer-container {
     display: flex;
     justify-content: space-between;
     gap: 40px;
     flex-wrap: wrap; /* Para responsive */
 }
-
 .footer-col {
     flex: 1; /* Ocupa 1 parte */
     min-width: 250px; /* Ancho mínimo antes de apilarse */
 }
-
-/* Columna del logo */
 .footer-col .logo {
     margin-bottom: 15px;
+}
+.footer-col h3 {
+    color: #ffffff;
+}
+/* Links */
+.footer-links {
+    list-style: none;
+}
+.footer-links li {
+    margin-bottom: 10px;
+}
+.footer-links a {
+    text-decoration: none;
+    color: var(--main-2);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+.footer-links a:hover {
+    color: var(--accent-2); 
 }
 
 /* Sin usar
@@ -322,65 +316,32 @@ h2 {
     color: #D7CCC8;
     line-height: 1.5;
 }
-*/
-
-/* Columnas de links */
-.footer-col h3 {
-    font-family: 'Suez One', serif;
-    font-size: 1.5rem;
-    color: #ffffff;
-    margin-bottom: 20px;
-}
-
-.footer-links {
-    list-style: none;
-}
-
-.footer-links li {
-    margin-bottom: 10px;
-}
-
-.footer-links a {
-    text-decoration: none;
-    color: var(--main-2);
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-    color: var(--accent-2); 
-}
 
 .article-flex-layout {
     display: flex;
     gap: 24px;
-    align-items: stretch; /* columnas igualan altura */
+    align-items: stretch;
     margin: 20px 0;
 }
-
 .article-col-text {
     min-width: 0;
 }
-
 .article-col-media {
     width: 90%;
     display: flex;
     align-items: center;
 }
-
-
-
 .article-col-media iframe {
     width: 100%;
     height: 100%;
     border: 0;
 }
-
 .article-main-image{
     width: 100%;
     object-fit: cover;
     margin: 20px 0;
 }
+*/
 
 /*Responsive para tablets*/
 @media (max-width: 900px) {
