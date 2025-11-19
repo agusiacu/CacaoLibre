@@ -1,18 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
-
+    
     const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenu = document.querySelector('.nav-mobile');
     if (menuBtn && mobileMenu) {
-        
         menuBtn.addEventListener('click', () => {
-            
             mobileMenu.classList.toggle('menu-open');
         });
     }
 
     let slideIndex = 0;
     showSlides();
-
     function showSlides() {
         let i;
         let slides = document.getElementsByClassName("mySlides");
