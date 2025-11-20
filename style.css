@@ -41,8 +41,11 @@ h3 {
 p {
     font-size: 1.2rem;
 }
-.header-content,footer,section {
+.header-content,footer {
     padding: 0 3%; 
+}
+section {
+    padding: 0 20%; 
 }
 footer,section {
     padding-top: 60px;
@@ -78,7 +81,7 @@ header {
     }
     span {
         font-family: var(--title);
-        font-size: 4vh;
+        font-size: 2.2rem;
         color: var(--accent-light); 
     }
 }
@@ -89,7 +92,7 @@ header {
     background-color: var(--accent-3); 
     color: white;
     font-weight: 700;
-    padding: 10px 20px;
+    padding: 0.6em 1.1em;
     border-radius: 50px;
     text-decoration: none;
     transition: background-color 0.3s ease;
@@ -110,7 +113,7 @@ header {
         text-decoration: none;
         color: var(--accent); 
         font-weight: 700;
-        transition: color 0.3s ease;
+        transition: all 0.3s ease;
     }
     a:hover {
         color: var(--accent-2);
@@ -171,114 +174,6 @@ header {
     transform: translateY(0);
 }
 
-/* Slideshow hero */
-.slideshow-container {
-    position: relative; 
-    height: 70vh; 
-    max-height: 600px;
-    background-color: var(--accent); 
-}
-.mySlides {
-    display: none; 
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-}
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1; 
-}
-
-/* Texto superpuesto */
-.hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); 
-    z-index: 2; 
-    color: white;
-    text-align: center;
-    padding: 20px;
-
-    h1 {
-        font-size: 3.5rem;
-        color: white;
-        margin-bottom: 10px;
-    }
-    p {
-        font-size: 1.5rem;
-        font-weight: 400;
-        max-width: 600px;
-    }
-}
-
-/* Animación de Fade (de W3Schools) */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-@keyframes fade {
-  from {opacity: 0.4}
-  to {opacity: 1}
-}
-
-/* Proyectos destacados */
-#proyectos {
-    background-color: var(--main); 
-}
-.proyectos-container {
-    display: flex;
-    justify-content: center; 
-    flex-wrap: wrap; 
-    gap: 30px; 
-    margin-top: 30px; 
-}
-.proyecto-card {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    flex-basis: 350px; /* Ancho base de cada tarjeta */
-    max-width: 400px; 
-
-    img {
-        width: 100%;
-        height: 200px; 
-    }
-    .card-content {
-        padding: 25px;
-        p {
-            font-size: 1rem;
-            line-height: 1.6;
-            color: var(--accent);
-            margin-bottom: 20px;
-        }
-        .btn-proyecto {
-            font-weight: 700;
-            color: var(--accent-2); 
-            text-decoration: none;
-            font-size: 1rem;
-        }
-        .btn-proyecto:hover {
-            text-decoration: underline;
-        }
-    }
-}
-.proyecto-card:hover {
-    transform: translateY(-5px); /* Efecto de levantar la tarjeta */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
-}
-
 /* Footer */
 footer {
     background-color: var(--accent);
@@ -316,6 +211,134 @@ footer {
     a:hover {
         color: var(--accent-2); 
     }
+}
+
+/* Slideshow hero */
+.slideshow-container {
+    position: relative; 
+    height: 70vh; 
+    max-height: 600px;
+    background-color: var(--accent); 
+}
+.mySlides {
+    display: none; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1; 
+}
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    z-index: 2; 
+    color: white;
+    text-align: center;
+    padding: 20px;
+
+    h1 {
+        font-size: 3.5rem;
+        color: white;
+        margin-bottom: 10px;
+    }
+    p {
+        font-size: 1.5rem;
+        font-weight: 400;
+        max-width: 600px;
+    }
+    .btn-donar {
+        margin-top: 20px;
+        font-size: 1.5rem;
+    }
+}
+
+/* Animación de Fade (de W3Schools) */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade {
+  from {opacity: 0.4}
+  to {opacity: 1}
+}
+
+/* Quienes somos */
+#quienes-somos {
+    .img-text-container {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        text-align: left;
+        
+        img {
+            width: 40%;
+            aspect-ratio: 3/2;
+            border-radius: 8px;
+            flex-shrink: 0;
+            min-height: 100%;
+            align-self: stretch;
+        }
+    }
+}
+
+/* Proyectos destacados */
+#proyectos {
+    background-color: var(--main); 
+}
+.proyectos-container {
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 30px; 
+    margin-top: 30px; 
+}
+.proyecto-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-basis: 350px; /* Ancho base de cada tarjeta */
+    max-width: 400px; 
+
+    img {
+        width: 100%;
+        height: 200px; 
+    }
+    .card-content {
+        padding: 25px;
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+    }
+}
+.btn-proyecto {
+    font-weight: 700;
+    color: var(--accent-2); 
+    text-decoration: none;
+}
+.btn-proyecto:hover {
+    text-decoration: underline;
+}
+.proyecto-card:hover {
+    transform: translateY(-5px); /* Efecto de levantar la tarjeta */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
 }
 
 /* Publicación individual */
@@ -357,6 +380,12 @@ article {
     .menu-btn {
         display: block;
     }
+    section,article {
+        padding: 30px 5%;
+        h1 {
+            font-size: 2rem;
+        }
+    }
 }
 /* Responsive para tablets */
 @media (max-width: 900px) and (min-width: 769px) {
@@ -371,10 +400,14 @@ article {
         flex-direction: column;
         text-align: center;
     }
-    article {
-        padding: 30px 5%;
-        h1 {
-            font-size: 2rem;
+    #quienes-somos .img-text-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        img {
+            width: 100%;
+            aspect-ratio: 2/1;
+            margin-bottom: 20px;
         }
     }
 }

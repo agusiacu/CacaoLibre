@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const headerHTML = `
 		<div class="header-content">
             <a href="index.html" class="logo">
-                <img src="images/Gemini_Generated_Image_jc6ngnjc6ngnjc6n.png" alt="Logo Cacao Libre">
+                <img src="images/logo.png" alt="Logo Cacao Libre">
                 <span>Cacao Libre</span>
             </a>
 
