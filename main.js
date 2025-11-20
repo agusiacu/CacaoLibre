@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <nav class="nav-desktop">
                 <ul>
                     <li><a href="index.html">INICIO</a></li>
-                    <li><a href="#">NOSOTROS</a></li>
+                    <li><a href="nosotros.html">NOSOTROS</a></li>
                     <li><a href="#">PROYECTOS</a></li>
                     <li><a href="#">IMPACTO</a></li>
                     <li><a href="#">UNIRSE</a></li>
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <h3>Mapa del Sitio</h3>
             <ul class="footer-links">
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="#quienes-somos">Nosotros</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
                 <li><a href="#">Impacto</a></li>
                 <li><a href="#">Unirse</a></li>
