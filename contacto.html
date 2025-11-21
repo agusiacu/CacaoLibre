@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Cacao Libre</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/Favico.ico" type="image/x-icon">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <header></header>
+
+    <main>
+        <article>
+            <h1>Unirse a la causa</h1>
+            <p>Completa el formulario para que podamos contactarte sobre oportunidades de voluntariado y colaboración.</p>
+
+            <form id="contact-form">
+                <label for="name">Nombre completo</label>
+                <input type="text" id="name" name="name" required placeholder="Tu nombre">
+
+                <label for="country">País de residencia</label>
+                <input type="text" id="country" name="country" required placeholder="Ej. Argentina">
+
+                <label for="age">Edad</label>
+                <input type="number" id="age" name="age" required min="0" placeholder="Edad">
+
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" required placeholder="tu@ejemplo.com">
+                
+
+                <label for="reason">¿Por qué quieres unirte a la causa?</label>
+                <textarea id="reason" name="reason" rows="6" required placeholder="Cuéntanos brevemente tus motivaciones..."></textarea>
+
+                <button type="submit" class="btn-donar">Enviar</button>
+            </form>
+
+            <div id="contact-success" style="display:none; margin-top:16px;">
+                <p>Gracias por tu interés. Hemos recibido tu mensaje y nos pondremos en contacto pronto.</p>
+            </div>
+        </article>
+    </main>
+
+    <footer></footer>
+
+    <script>
+        // Manejo básico en cliente
+        document.addEventListener('DOMContentLoaded', function(){
+            const form = document.getElementById('contact-form');
+            const success = document.getElementById('contact-success');
+            form.addEventListener('submit', function(e){
+                e.preventDefault();
+                // Validación simple adicional
+                if (!form.checkValidity()) {
+                    form.reportValidity();
+                    return;
+                }
+                form.style.display = 'none';
+                success.style.display = 'block';
+            });
+        });
+    </script>
+</body>
+</html>

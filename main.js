@@ -12,10 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 <ul>
                     <li><a href="index.html">INICIO</a></li>
                     <li><a href="nosotros.html">NOSOTROS</a></li>
-                    <li><a href="#">PROYECTOS</a></li>
+                    <li><a href="proyectos.html">PROYECTOS</a></li>
                     <li><a href="#">IMPACTO</a></li>
                     <li><a href="#">UNIRSE</a></li>
-                    <li><a href="#">CONTACTO</a></li>
+                    <li><a href="contacto.html">CONTACTO</a></li>
                     <li><a href="#" class="btn-donar">Donar</a></li>
                 </ul>
             </nav>
@@ -29,8 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
         
         <nav class="nav-mobile">
             <a href="index.html">INICIO</a>
-            <a href="#">NOSOTROS</a>
-            <a href="#">PROYECTOS</a>
+            <a href="nosotros.html">NOSOTROS</a>
+            <a href="proyectos.html">PROYECTOS</a>
             <a href="#">IMPACTO</a>
             <a href="#">UNIRSE</a>
             <a href="#">CONTACTO</a>
@@ -45,10 +45,10 @@ document.addEventListener('DOMContentLoaded', () => {
             <ul class="footer-links">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
                 <li><a href="#">Impacto</a></li>
                 <li><a href="#">Unirse</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </div>
         <div class="footer-col">

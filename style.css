@@ -370,6 +370,96 @@ article {
     }
 }
 
+/* Formulario de contacto*/
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 800px;
+    margin-top: 18px;
+}
+
+#contact-form label {
+    font-weight: 700;
+    color: var(--accent);
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="number"],
+#contact-form input[type="email"],
+
+#contact-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    background: #ffffff;
+    color: var(--accent);
+    font-size: 1rem;
+}
+
+#contact-form input:focus, #contact-form textarea:focus {
+    outline: none;
+    border-color: var(--accent-2);
+    box-shadow: 0 6px 18px rgba(255,143,0,0.06);
+}
+
+#contact-success {
+    max-width: 800px;
+    background: #E8F5E9;
+    border: 1px solid #C8E6C9;
+    padding: 14px;
+    border-radius: 8px;
+    color: var(--accent);
+}
+
+@media (max-width: 900px) {
+    #contact-form { max-width: 100%; }
+    #contact-success { max-width: 100%; }
+}
+
+/* Publicaciones: lista de tarjetas con foto a la izquierda y título a la derecha */
+.publicaciones-section {
+    padding: 60px 20%;
+}
+.publicaciones-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.pub-card {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    background: white;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+}
+.pub-card img {
+    width: 140px;
+    height: 96px;
+    object-fit: cover;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+.pub-card a {
+    text-decoration: none;
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 900px) {
+    .publicaciones-section { padding: 40px 5%; }
+    .pub-card img { width: 120px; height: 82px; }
+}
+
+@media (max-width: 768px) {
+    .pub-card { gap: 12px; }
+    .pub-card img { width: 84px; height: 60px; }
+}
+
 /* Secciones anchas (como "Nosotros") */
 .wide-sections section {
     padding: 60px 10%;
