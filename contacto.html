@@ -24,7 +24,7 @@
                 <input type="text" id="country" name="country" required placeholder="Ej. Argentina">
 
                 <label for="age">Edad</label>
-                <input type="number" id="age" name="age" required min="0" placeholder="Edad">
+                <input type="number" id="age" name="age" required min="18" max="100" placeholder="Edad">
 
                 <label for="email">Correo electrónico</label>
                 <input type="email" id="email" name="email" required placeholder="tu@ejemplo.com">
@@ -43,23 +43,5 @@
     </main>
 
     <footer></footer>
-
-    <script>
-        // Manejo básico en cliente
-        document.addEventListener('DOMContentLoaded', function(){
-            const form = document.getElementById('contact-form');
-            const success = document.getElementById('contact-success');
-            form.addEventListener('submit', function(e){
-                e.preventDefault();
-                // Validación simple adicional
-                if (!form.checkValidity()) {
-                    form.reportValidity();
-                    return;
-                }
-                form.style.display = 'none';
-                success.style.display = 'block';
-            });
-        });
-    </script>
 </body>
 </html>
