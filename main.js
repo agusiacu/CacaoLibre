@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <a href="proyectos.html">PROYECTOS</a>
             <a href="#">IMPACTO</a>
             <a href="#">UNIRSE</a>
-            <a href="#">CONTACTO</a>
+            <a href="contacto.html">CONTACTO</a>
             <a href="#" class="btn-donar">DONAR</a>
         </nav>
 	`;
