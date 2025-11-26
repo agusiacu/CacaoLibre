@@ -25,7 +25,7 @@ function insertHeader() {
                     <li><a href="#">IMPACTO</a></li>
                     <li><a href="unirse.html">UNIRSE</a></li>
                     <li><a href="contacto.html">CONTACTO</a></li>
-                    <li><a href="#" class="btn-donar">Donar</a></li>
+                    <li><a href="donar.html" class="btn-donar">Donar</a></li>
                 </ul>
             </nav>
 
@@ -43,7 +43,7 @@ function insertHeader() {
             <a href="#">IMPACTO</a>
             <a href="unirse.html">UNIRSE</a>
             <a href="contacto.html">CONTACTO</a>
-            <a href="#" class="btn-donar">DONAR</a>
+            <a href="donar.html" class="btn-donar">DONAR</a>
         </nav>
 	`;
     const headerContainer = document.querySelector('header');
@@ -67,7 +67,7 @@ function insertFooter() {
         <div class="footer-col">
             <h3>Únete a la Causa</h3>
             <p>Tu aporte hace la diferencia.</p>
-            <a href="#" class="btn-donar">Donar</a>
+            <a href="donar.html" class="btn-donar">Donar</a>
         </div>
 	`;
     const footerContainer = document.querySelector('footer');

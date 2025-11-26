@@ -563,6 +563,31 @@ article {
     transform: scale(1.1);
 }
 
+.donate-hero {
+    background-color: var(--accent-3); 
+    color: white;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/chocolatestory.jpg');
+    padding: 80px 20px;
+    text-align: center;
+    background-position: center;
+
+    h1 {
+        font-size: 3rem;
+        color: #d2937f;
+        margin-bottom: 15px;
+    }
+    p {
+        font-size: 1.5rem;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+}
+
+#donate{
+    width: 49%;
+    align-content: center;
+}
+
 /* Responsive para ambos */
 @media (max-width: 900px) {
     .nav-desktop {
