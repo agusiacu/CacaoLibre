@@ -23,7 +23,7 @@ function insertHeader() {
                     <li><a href="nosotros.html">NOSOTROS</a></li>
                     <li><a href="proyectos.html">PROYECTOS</a></li>
                     <li><a href="#">IMPACTO</a></li>
-                    <li><a href="#">UNIRSE</a></li>
+                    <li><a href="unirse.html">UNIRSE</a></li>
                     <li><a href="contacto.html">CONTACTO</a></li>
                     <li><a href="#" class="btn-donar">Donar</a></li>
                 </ul>
@@ -41,7 +41,7 @@ function insertHeader() {
             <a href="nosotros.html">NOSOTROS</a>
             <a href="proyectos.html">PROYECTOS</a>
             <a href="#">IMPACTO</a>
-            <a href="#">UNIRSE</a>
+            <a href="unirse.html">UNIRSE</a>
             <a href="contacto.html">CONTACTO</a>
             <a href="#" class="btn-donar">DONAR</a>
         </nav>
@@ -60,7 +60,7 @@ function insertFooter() {
                 <li><a href="nosotros.html">Nosotros</a></li>
                 <li><a href="proyectos.html">Proyectos</a></li>
                 <li><a href="#">Impacto</a></li>
-                <li><a href="#">Unirse</a></li>
+                <li><a href="unirse.html">Unirse</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </div>
