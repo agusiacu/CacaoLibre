@@ -212,6 +212,7 @@ footer {
 }
 .footer-links {
     list-style: none;
+    font-size: 1.2rem;
 
     li {
         margin-bottom: 10px;
@@ -224,6 +225,28 @@ footer {
     }
     a:hover {
         color: var(--accent-2); 
+    }
+}
+.social-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+
+    a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: fit-content;
+        transition: color 0.3s ease;
+    }
+    a:hover {
+        color: var(--accent-2);
+    }
+    img {
+        width: 1.5em;
+        aspect-ratio: 1/1;
     }
 }
 
@@ -244,7 +267,7 @@ footer {
     background-size: cover;
     background-position: center;
 }
-.hero-overlay {
+.slideshow-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -253,7 +276,7 @@ footer {
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1; 
 }
-.hero-text {
+.slideshow-text {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -338,14 +361,18 @@ footer {
             margin-bottom: 20px;
         }
     }
+    .link {
+        text-decoration-color: white;
+    }
 }
-.btn-proyecto {
-    font-weight: 700;
+.link {
+    font-weight: bold;
     color: var(--accent-2); 
-    text-decoration: none;
+    text-decoration: underline var(--main) 2px;
+    transition: all 0.3s ease;
 }
-.btn-proyecto:hover {
-    text-decoration: underline;
+.link:hover {
+    text-decoration-color: var(--accent-2);
 }
 .proyecto-card:hover {
     transform: translateY(-5px); /* Efecto de levantar la tarjeta */
@@ -486,8 +513,8 @@ article {
     }
 }
 
-/* Página Unirse */
-.join-hero {
+/* Hero general */
+.hero {
     position: relative;
     height: 50vh; 
     min-height: 400px;
@@ -512,6 +539,8 @@ article {
         max-width: 700px;
     }
 }
+
+/* Página Unirse */
 .action-card {
     background-color: white;
     border-radius: 12px;
@@ -545,7 +574,6 @@ article {
     border: 2px solid var(--accent-3); /* Borde verde al pasar el mouse */
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
-
 .btn-inscripcion {
     display: inline-block;
     background-color: var(--accent-2); 
@@ -563,29 +591,92 @@ article {
     transform: scale(1.1);
 }
 
-.donate-hero {
-    background-color: var(--accent-3); 
-    color: white;
+/* Página Donar */
+#donate-hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/chocolatestory.jpg');
-    padding: 80px 20px;
-    text-align: center;
-    background-position: center;
 
     h1 {
-        font-size: 3rem;
-        color: #d2937f;
-        margin-bottom: 15px;
-    }
-    p {
-        font-size: 1.5rem;
-        max-width: 700px;
-        margin: 0 auto;
+        color: var(--accent-3);
     }
 }
-
-#donate{
-    width: 49%;
+#donate-btn {
+    width: 50%;
     align-content: center;
+}
+
+/* Página Impacto */
+.impacto {
+    p {
+        margin-bottom: 20px;
+    }
+}
+.calculator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+    font-size: 2rem;
+    background-color: var(--main);
+    padding: 25px 0;
+    border-radius: 18px;
+    box-shadow: 0 6px 22px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+
+    p {
+        margin: 0;
+        font-size: inherit;
+    }
+    select, span {
+        width: fit-content;
+        padding: 8px;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: inherit;
+        border: 2px solid var(--main);
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+    select {
+        appearance: none;
+        background: none;
+        text-align: center;
+
+        option {
+            color: var(--accent);
+        }
+        option[value="tony"] {
+            color: var(--accent-3);
+        }
+    }
+    select:has(option[value="tony"]:checked) {
+        color: var(--accent-3);
+    }
+    span:hover, select:hover, span:focus, select:focus {
+        outline: none;
+        border: 2px solid var(--accent-2);
+        background: white;
+    }
+    .impact-number {
+        font-weight: 800;
+        font-size: 2.2rem;
+    }
+}
+.calculator:hover {
+    transform: translateY(-3px);
+}
+.note {
+    background-color: #fff3cd;
+    padding: 18px 22px;
+    border-left: 5px solid var(--accent-2);
+    border-radius: 10px;
+    margin-top: 25px;
+    line-height: 1.7;
+}
+#redirect {
+    font-size: 1.3rem;
+    margin-top: 35px;
+    font-weight: bold;
 }
 
 /* Responsive para ambos */
@@ -641,4 +732,3 @@ article {
         }
     }
 }
-

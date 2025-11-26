@@ -22,7 +22,7 @@ function insertHeader() {
                     <li><a href="index.html">INICIO</a></li>
                     <li><a href="nosotros.html">NOSOTROS</a></li>
                     <li><a href="proyectos.html">PROYECTOS</a></li>
-                    <li><a href="#">IMPACTO</a></li>
+                    <li><a href="impacto.html">IMPACTO</a></li>
                     <li><a href="unirse.html">UNIRSE</a></li>
                     <li><a href="contacto.html">CONTACTO</a></li>
                     <li><a href="donar.html" class="btn-donar">Donar</a></li>
@@ -40,7 +40,7 @@ function insertHeader() {
             <a href="index.html">INICIO</a>
             <a href="nosotros.html">NOSOTROS</a>
             <a href="proyectos.html">PROYECTOS</a>
-            <a href="#">IMPACTO</a>
+            <a href="impacto.html">IMPACTO</a>
             <a href="unirse.html">UNIRSE</a>
             <a href="contacto.html">CONTACTO</a>
             <a href="donar.html" class="btn-donar">DONAR</a>
@@ -63,6 +63,14 @@ function insertFooter() {
                 <li><a href="unirse.html">Unirse</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
+        </div>
+        <div class="footer-col">
+            <h3>Nuestras Redes</h3>
+            <div class="social-links">
+                <a href="https://facebook.com" target="_blank"><img src="images/facebook-icon.svg">Facebook</a>
+                <a href="https://x.com" target="_blank"><img src="images/twitter-icon.svg">Twitter</a>
+                <a href="https://instagram.com" target="_blank"><img src="images/instagram-icon.svg">Instagram</a>
+            </div>
         </div>
         <div class="footer-col">
             <h3>Únete a la Causa</h3>
