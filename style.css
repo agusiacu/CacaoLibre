@@ -7,6 +7,8 @@
     --accent-light: #5D4037; /* Accento más claro */
     --accent-2: #FF8F00; /* Accento alternativo */
     --accent-3: #8BC34A; /* Accento alternativo */
+    --accent-2-dark: #f58733; /* Accento alternativo oscuro */
+    --accent-3-dark: #7CB342; /* Accento alternativo oscuro */
     /* Fonts */
     --title: 'Suez One', serif;
     --text: 'Quicksand', sans-serif;
@@ -109,7 +111,7 @@ header {
     transition: all 0.3s ease;
 }
 .btn-donar:hover {
-    background-color: #7CB342; /* Verde más oscuro */
+    background-color: var(--accent-3-dark);
     transform: scale(110%);
 }
 
@@ -135,7 +137,7 @@ header {
         color: white;
     }
     .btn-donar:hover {
-        background-color: #7CB342; /* Verde más oscuro */
+        background-color: var(--accent-3-dark);
         color: white;
     }
 }
@@ -202,7 +204,7 @@ footer {
         margin-bottom: 15px;
     }
     h3 {
-        color: #ffffff;
+        color: white;
     }
     .btn-donar {
         margin-top: 1rem;
@@ -316,7 +318,7 @@ footer {
     margin-top: 30px; 
 }
 .proyecto-card {
-    background-color: #ffffff;
+    background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     overflow: hidden;
@@ -404,7 +406,7 @@ article {
         padding: 12px 14px;
         border: 1px solid #E0E0E0;
         border-radius: 8px;
-        background: #ffffff;
+        background: white;
         color: var(--accent);
         font-size: 1rem;
     }
@@ -422,7 +424,7 @@ article {
         box-shadow: 0 6px 18px rgba(255,143,0,0.06);
     }
     button:hover {
-        background-color: #f58733; /* Naranja más oscuro */
+        background-color: var(--accent-2-dark);
         transform: scale(110%);
     }
 }
@@ -475,6 +477,7 @@ article {
     }
 }
 
+/* Sección origen con diseño invertido */
 #origen {
     background-color: var(--main);
     
@@ -483,7 +486,7 @@ article {
     }
 }
 
-/* Hero específico para la pagina unirse */
+/* Página Unirse */
 .join-hero {
     position: relative;
     height: 50vh; 
@@ -497,9 +500,20 @@ article {
     justify-content: center;
     text-align: center;
     padding: 20px;
+
+    h1 {
+        color: var(--accent-2);
+        font-size: 3rem;
+        margin-bottom: 15px;
+    }
+    p {
+        color: white; 
+        font-size: 1.5rem;
+        max-width: 700px;
+    }
 }
 .action-card {
-    background-color: #ffffff;
+    background-color: white;
     border-radius: 12px;
     padding: 40px 25px;
     text-align: center;
@@ -510,44 +524,29 @@ article {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
 
+    .icon-box {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+        line-height: 1;
+    }
+    h3 {
+        font-family: var(--title);
+        color: var(--accent-light);
+        margin-bottom: 15px;
+    }
+    p {
+        font-size: 1rem;
+        color: var(--accent);
+    }
+}
 .action-card:hover {
     transform: translateY(-8px);
-    border-color: var(--accent-3); /* Borde verde al pasar el mouse */
+    border: 2px solid var(--accent-3); /* Borde verde al pasar el mouse */
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
-.icon-box {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-    line-height: 1;
-}
-
-.action-card h3 {
-    font-family: var(--title);
-    color: var(--accent-light);
-    margin-bottom: 15px;
-}
-
-.action-card p {
-    font-size: 1rem;
-    color: var(--accent);
-}
-
-.join-hero h1 {
-    color: #bd7f6c;
-    font-size: 3rem;
-    margin-bottom: 15px;
-}
-
-.join-hero p {
-    color: white; 
-    font-size: 1.5rem;
-    max-width: 700px;
-}
-
-.btn-cta-big {
+.btn-inscripcion {
     display: inline-block;
     background-color: var(--accent-2); 
     color: white;
@@ -558,6 +557,10 @@ article {
     margin-top: 25px;
     transition: transform 0.2s, background-color 0.3s;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.btn-inscripcion:hover {
+    background-color: var(--accent-2-dark);
+    transform: scale(1.1);
 }
 
 /* Responsive para ambos */
