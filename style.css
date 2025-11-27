@@ -1,17 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&family=Suez+One&display=swap');
 :root {
-    /* Colores */
+    /* Fonts */
+    --title: 'Suez One', serif;
+    --text: 'Quicksand', sans-serif;
+    /* Colores Light Mode*/
     --main: #fcf8f0; /* Color principal para fondos */
     --main-2: #FFF8E1; /* Color alternativo para fondos */
     --accent: #3E2723; /* Accento para títulos y otras cosas */
     --accent-light: #5D4037; /* Accento más claro */
     --accent-2: #FF8F00; /* Accento alternativo */
-    --accent-3: #8BC34A; /* Accento alternativo */
     --accent-2-dark: #f58733; /* Accento alternativo oscuro */
+    --accent-3: #8BC34A; /* Accento alternativo */
     --accent-3-dark: #7CB342; /* Accento alternativo oscuro */
-    /* Fonts */
-    --title: 'Suez One', serif;
-    --text: 'Quicksand', sans-serif;
+    --card-bg: #FFFFFF; /* Fondo de tarjetas */
+    --footer-bg: #3E2723; /* Fondo del footer */
+}
+.dark {
+    /* Colores Dark Mode */
+    --main: #1f1c18;
+    --main-2: #2a2622;
+    --accent: #d7ccc8;
+    --accent-light: #b8ada8;
+    --card-bg: #31302e; 
+    --footer-bg: #3f2f2c;
 }
 
 /* Estilos generales */
@@ -115,6 +126,33 @@ header {
     transform: scale(110%);
 }
 
+/* Botón theme */
+#theme-switch {
+    width: 2.5rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: none;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+        width: 100%;
+        height: auto;
+        fill: var(--accent);
+    }
+    svg:last-child {
+        display: none;
+    }
+}
+.dark #theme-switch svg:first-child {
+    display: none;
+}
+.dark #theme-switch svg:last-child {
+    display: block;
+}
+
 /* Header diseño desktop */
 .nav-desktop {
     ul {
@@ -190,12 +228,15 @@ header {
 
 /* Footer */
 footer {
-    background-color: var(--accent);
+    background-color: var(--footer-bg);
     color: var(--main-2);
     display: flex;
     justify-content: space-between;
     gap: 40px;
     flex-wrap: wrap; /* Para responsive */
+}
+.dark footer {
+    color: #FFF8E1;
 }
 .footer-col {
     flex: 1; /* Ocupa 1 parte */
@@ -204,7 +245,7 @@ footer {
         margin-bottom: 15px;
     }
     h3 {
-        color: white;
+        color: inherit;
     }
     .btn-donar {
         margin-top: 1rem;
@@ -213,14 +254,14 @@ footer {
 .footer-links {
     list-style: none;
     font-size: 1.2rem;
+    font-weight: 500;
 
     li {
         margin-bottom: 10px;
     }
     a {
         text-decoration: none;
-        color: var(--main-2);
-        font-weight: 500;
+        color: inherit;
         transition: color 0.3s ease;
     }
     a:hover {
@@ -231,8 +272,9 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
     font-size: 1.2rem;
+    font-weight: 500;
 
     a {
         display: flex;
@@ -341,7 +383,7 @@ footer {
     margin-top: 30px; 
 }
 .proyecto-card {
-    background-color: white;
+    background-color: var(--card-bg);
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     overflow: hidden;
@@ -362,7 +404,7 @@ footer {
         }
     }
     .link {
-        text-decoration-color: white;
+        text-decoration-color: var(--card-bg);
     }
 }
 .link {
@@ -433,7 +475,7 @@ article {
         padding: 12px 14px;
         border: 1px solid #E0E0E0;
         border-radius: 8px;
-        background: white;
+        background: var(--card-bg);
         color: var(--accent);
         font-size: 1rem;
     }
@@ -474,7 +516,7 @@ article {
     display: flex;
     gap: 16px;
     align-items: center;
-    background: white;
+    background: var(--card-bg);
     padding: 12px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.06);
@@ -542,9 +584,9 @@ article {
 
 /* Página Unirse */
 .action-card {
-    background-color: white;
+    background-color: var(--card-bg);
     border-radius: 12px;
-    padding: 40px 25px;
+    padding: 40px 0;
     text-align: center;
     border: 1px solid rgba(0,0,0,0.05);
     flex-basis: 300px;
@@ -553,6 +595,7 @@ article {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 20px;
 
     .icon-box {
         font-size: 3.5rem;
@@ -560,18 +603,12 @@ article {
         line-height: 1;
     }
     h3 {
-        font-family: var(--title);
-        color: var(--accent-light);
         margin-bottom: 15px;
-    }
-    p {
-        font-size: 1rem;
-        color: var(--accent);
     }
 }
 .action-card:hover {
     transform: translateY(-8px);
-    border: 2px solid var(--accent-3); /* Borde verde al pasar el mouse */
+    border: 2px solid var(--accent-3);
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 .btn-inscripcion {
@@ -582,7 +619,7 @@ article {
     padding: 15px 40px;
     border-radius: 50px;
     text-decoration: none;
-    margin-top: 25px;
+    margin: 25px 0;
     transition: transform 0.2s, background-color 0.3s;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
@@ -633,6 +670,7 @@ article {
         cursor: pointer;
         font-weight: bold;
         font-size: inherit;
+        color: inherit;
         border: 2px solid var(--main);
         border-radius: 10px;
         background: none;
@@ -659,7 +697,7 @@ article {
     input:hover, select:hover, input:focus, select:focus {
         outline: none;
         border: 2px solid var(--accent-2);
-        background: white;
+        background: var(--card-bg);
     }
     .impact-number {
         font-weight: 800;
@@ -683,6 +721,9 @@ article {
     border-radius: 10px;
     margin-top: 25px;
     line-height: 1.7;
+}
+.dark .note {
+    background-color: #464542;
 }
 #redirect {
     font-size: 1.3rem;
