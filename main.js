@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+// Construir e insertar header HTML
 function insertHeader() {
-    // Construir e insertar header HTML
     const headerHTML = `
 		<div class="header-content">
             <a href="index.html" class="logo">
@@ -63,8 +63,8 @@ function insertHeader() {
     if (headerContainer) headerContainer.innerHTML = headerHTML;
 }
 
+// Construir e insertar footer HTML
 function insertFooter() {
-    // Construir e insertar footer HTML
     const footerHTML = `
 		<div class="footer-col">
             <h3>Mapa del Sitio</h3>
@@ -90,13 +90,16 @@ function insertFooter() {
             <p>Tu aporte hace la diferencia.</p>
             <a href="donar.html" class="btn-donar">Donar</a>
         </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Cacao Libre. Todos los derechos reservados.</p>
+        </div>
 	`;
     const footerContainer = document.querySelector('footer');
     if (footerContainer) footerContainer.innerHTML = footerHTML;
 }
 
+// Funcionalidad del menú móvil
 function mobileMenu() {
-    // Funcionalidad del menú móvil
     const menuBtn = document.getElementById('menu-btn');
 	const mobileMenu = document.querySelector('.nav-mobile');
 	if (menuBtn && mobileMenu) {
@@ -106,8 +109,8 @@ function mobileMenu() {
 	}
 }
 
+// Slideshow automático
 function startSlideshow() {
-    // Slideshow automático
     let slideIndex = 0;
     showSlides();
 
@@ -133,8 +136,8 @@ function startSlideshow() {
     }
 }
 
+// Manejo del formulario de contacto
 function contactForm() {
-    // Manejo del formulario de contacto
     const form = document.getElementById('contact-form');
     const success = document.getElementById('contact-success');
 
@@ -152,7 +155,7 @@ function contactForm() {
     }
 }
 
-
+// Calculadora de impacto
 function calculateImpact() {
     // Valores de impacto por marca
     const impactValues = {
@@ -173,9 +176,9 @@ function calculateImpact() {
         const brand = brandSelect.value;
         const hoursPerBar = impactValues[brand];
 
-        const totalHours = amount * hoursPerBar;
+        const totalHours = Math.ceil(amount * hoursPerBar);
 
-        impactP.innerText = totalHours.toFixed(1);
+        impactP.innerText = totalHours;
 
         if (brand === "tony") {
             impactP.classList.add("no-impact");
@@ -183,6 +186,9 @@ function calculateImpact() {
         else {
             impactP.classList.remove("no-impact");
         }
+
+        // Animar contador
+        animateCounter(impactP, totalHours);
     }
 
     // Eventos para calcular impacto en tiempo real
@@ -192,6 +198,7 @@ function calculateImpact() {
     }
 };
 
+// Cambio de tema claro/oscuro
 function changeTheme() {
     let darkmode = localStorage.getItem('darkmode');
     if (darkmode === 'enabled') {
@@ -229,4 +236,19 @@ function changeTheme() {
             }
         });
     }
+}
+
+// Función para animar contadores
+function animateCounter(element, target) {
+    let current = 0;
+    const increment = Math.max(1, target / 100);
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+            element.textContent = target;
+            clearInterval(timer);
+        } else {
+            element.textContent = Math.floor(current);
+        }
+    }, 20);
 }

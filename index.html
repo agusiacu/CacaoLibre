@@ -17,13 +17,13 @@
     <main>
         <section class="slideshow-container">
 
-            <div class="mySlides fade" style="background-image: url(images/nene.jpg);">
+            <div class="mySlides fade" id="one">
             </div>
           
-            <div class="mySlides fade" style="background-image: url(images/cultivo.jpg);">
+            <div class="mySlides fade" id="two">
             </div>
           
-            <div class="mySlides fade" style="background-image: url(images/cultivo-2.jpg);">
+            <div class="mySlides fade" id="three">
             </div>
 
             <div class="slideshow-overlay"></div>
@@ -38,7 +38,10 @@
         <section id="quienes-somos">
             <h2>¿Quiénes Somos?</h2>
             <div class="img-text-container">
-                <img src="images/nene.jpg" alt="Niños en plantación de cacao">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="images/nene-2-mobile.png">
+                    <img src="images/nene-2.png" alt="Chico trabajando en plantación de cacao">
+                </picture>
                 <div class="text-container">
                     <p>Cacao Libre es una ONG dedicada a combatir la explotación infantil en las plantaciones de cacao. Nosotros peleamos por los miles de niños y niñas que son sometidos a trabajos peligrosos que vulneran sus derechos y limitan sus oportunidades de futuro.</p>
                     <br>
@@ -52,7 +55,10 @@
             <div class="proyectos-container">
                 
                 <div class="proyecto-card">
-                    <img src="images/chocolate.jpg" alt="publi1">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="images/chocolate-mobile.jpg">
+                        <img src="images/chocolate.jpg">
+                    </picture>
                     <div class="card-content">
                         <h3>El origen del problema</h3>
                         <p>La verdad oculta en cada chocolate producido por tus compañias favoritas.</p>
@@ -61,7 +67,10 @@
                 </div>
 
                 <div class="proyecto-card">
-                    <img src="images/cosechadores.jpg" alt="Proyecto Comercio Justo">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="images/cosechadores-mobile.jpg">
+                        <img src="images/cosechadores.jpg">
+                    </picture>
                     <div class="card-content">
                         <h3>Apoyar a los agricultores de cacao</h3>
                         <p>Los agricultores de cacao son el corazón de la cadena productiva, pero reciben una fracción del valor final de la tableta.</p>
@@ -70,7 +79,10 @@
                 </div>
 
                 <div class="proyecto-card">
-                    <img src="images/voluntariado.jpg" alt="Proyecto Apoyo Familiar">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="images/voluntariado-mobile.jpg">
+                        <img src="images/voluntariado.jpg">
+                    </picture>
                     <div class="card-content">
                         <h3>Voluntariado y programas educativos</h3>
                         <p>Programas de apoyo económico para familias, reduciendo la necesidad de trabajo infantil.</p>
