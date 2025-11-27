@@ -72,7 +72,7 @@ function insertFooter() {
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
                 <li><a href="proyectos.html">Proyectos</a></li>
-                <li><a href="#">Impacto</a></li>
+                <li><a href="impacto.html">Impacto</a></li>
                 <li><a href="unirse.html">Unirse</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
