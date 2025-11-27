@@ -627,7 +627,7 @@ article {
         margin: 0;
         font-size: inherit;
     }
-    select, span {
+    select, input {
         width: fit-content;
         padding: 8px;
         cursor: pointer;
@@ -635,11 +635,15 @@ article {
         font-size: inherit;
         border: 2px solid var(--main);
         border-radius: 10px;
+        background: none;
         transition: all 0.3s ease;
+    }
+    input {
+        width: 4ch;
+        text-align: center;
     }
     select {
         appearance: none;
-        background: none;
         text-align: center;
 
         option {
@@ -652,7 +656,7 @@ article {
     select:has(option[value="tony"]:checked) {
         color: var(--accent-3);
     }
-    span:hover, select:hover, span:focus, select:focus {
+    input:hover, select:hover, input:focus, select:focus {
         outline: none;
         border: 2px solid var(--accent-2);
         background: white;
@@ -660,6 +664,13 @@ article {
     .impact-number {
         font-weight: 800;
         font-size: 2.2rem;
+
+        span {
+            color: var(--accent-2);
+        }
+    }
+    .no-impact span {
+        color: var(--accent-3);
     }
 }
 .calculator:hover {

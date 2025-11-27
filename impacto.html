@@ -21,7 +21,7 @@
             <p>Usá los campos abajo para estimar cuántas horas de trabajo infantil podrían corresponder a los chocolates que compras.</p>
 
             <div class="calculator">
-                <span contenteditable>0</span>
+                <input type="text" maxlength="3" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')" placeholder="N°"/>
                 <p>barras de</p>
 
                 <select name="marcas" id="marcas">
@@ -33,7 +33,7 @@
                 </select>
 
                 <p>equivale a</p>
-                <p class="impact-number">100 horas de mano de obra infantil</p>
+                <p class="impact-number"><span>N°</span> horas de mano de obra infantil</p>
             </div>
 
             <p class="note">Nota: Estos números son estimaciones orientativas pensadas para sensibilizar y fomentar acciones. Los datos utilizados se basan en estudios disponibles, pero la realidad puede variar significativamente. Los resultados deben interpretarse como aproximaciones y no como representaciones exactas de cada caso.</p>

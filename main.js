@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileMenu();
 	startSlideshow();
     contactForm();
+    calculateImpact();
 
 });
 
@@ -138,3 +139,43 @@ function contactForm() {
         });
     }
 }
+
+
+function calculateImpact() {
+    // Valores de impacto por marca
+    const impactValues = {
+        milka: 2.5,       // horas por barra
+        kitkat: 3,
+        snickers: 2,
+        hershey: 4,
+        tony: 0         // chocolate ético: impacto nulo
+    };
+
+    const amountInput = document.querySelector(".calculator input");
+    const brandSelect = document.querySelector(".calculator select");
+    const impactP = document.querySelector(".impact-number");
+
+    // Calcular y actualizar UI
+    function updateImpact() {
+        const amount = amountInput.value;
+        const brand = brandSelect.value;
+        const hoursPerBar = impactValues[brand];
+
+        const totalHours = amount * hoursPerBar;
+
+        impactP.innerHTML = `<span>${totalHours.toFixed(1)}</span> horas de mano de obra infantil`;
+
+        if (brand === "tony") {
+            impactP.classList.add("no-impact");
+        }
+        else {
+            impactP.classList.remove("no-impact");
+        }
+    }
+
+    // Eventos para calcular impacto en tiempo real
+    if (amountInput && brandSelect && impactP) {
+        amountInput.addEventListener("input", updateImpact);
+        brandSelect.addEventListener("change", updateImpact);
+    }
+};
