@@ -87,8 +87,9 @@ header {
 }
 .header-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: right;
     align-items: center;
+    gap: 40px;
     padding-top: 10px;
     padding-bottom: 10px;
     z-index: 10;
@@ -99,6 +100,7 @@ header {
     align-items: center;
     text-decoration: none;
     gap: 10px;
+    margin-right: auto;
 
     img {
         height: 70px;
@@ -127,7 +129,7 @@ header {
 }
 
 /* Botón theme */
-#theme-switch {
+#theme-switch, #theme-switch-mobile {
     width: 2.5rem;
     aspect-ratio: 1/1;
     border-radius: 50%;
@@ -146,11 +148,17 @@ header {
         display: none;
     }
 }
-.dark #theme-switch svg:first-child {
+.dark #theme-switch svg:first-child, #theme-switch-mobile svg:first-child {
     display: none;
 }
-.dark #theme-switch svg:last-child {
+.dark #theme-switch svg:last-child, #theme-switch-mobile svg:last-child {
     display: block;
+}
+#theme-switch:hover{
+    transform: scale(1.1);
+}
+#theme-switch-mobile{
+    display: none;
 }
 
 /* Header diseño desktop */
@@ -181,14 +189,14 @@ header {
 }
 
 /* Header diseño celular */
-.menu-btn {
+#menu-btn {
     display: none; /* Oculto en escritorio */
     background: none;
     border: none;
     cursor: pointer;
     padding: 5px;
 }
-.menu-btn span {
+#menu-btn span {
     display: block;
     width: 25px;
     height: 3px;
@@ -702,10 +710,7 @@ article {
     .impact-number {
         font-weight: 800;
         font-size: 2.2rem;
-
-        span {
-            color: var(--accent-2);
-        }
+        color: var(--accent-2);
     }
     .no-impact span {
         color: var(--accent-3);
@@ -731,12 +736,12 @@ article {
     font-weight: bold;
 }
 
-/* Responsive para ambos */
+/* Responsive para tablets y celulares */
 @media (max-width: 900px) {
     .nav-desktop {
         display: none;
     }
-    .menu-btn {
+    #menu-btn, #theme-switch-mobile {
         display: block;
     }
     section, article, .wide-sections section {
@@ -752,9 +757,12 @@ article {
         width: 120px;
         height: 82px; 
     }
+    .calculator {
+        flex-direction: column;
+        gap: 15px;
+    }
 }
-/* Responsive para tablets */
-@media (max-width: 900px) and (min-width: 769px) {}
+
 /* Responsive para celulares */
 @media (max-width: 768px) {
     :root {
